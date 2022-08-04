@@ -8,6 +8,7 @@ using System;
 
 namespace Permissoes_WebApi.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuarioController : ControllerBase
@@ -48,7 +49,8 @@ namespace Permissoes_WebApi.Controllers
             }
         }
 
-        //[Authorize(Roles = "1")]
+        
+        [Authorize(Roles = "1" + "," + "2")]
         [HttpPost]
         public IActionResult Cadastro(Usuario novoUsuario)
         {
@@ -64,6 +66,7 @@ namespace Permissoes_WebApi.Controllers
             }
         }
 
+        [Authorize(Roles = "2")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
@@ -79,6 +82,7 @@ namespace Permissoes_WebApi.Controllers
             }
         }
 
+        [Authorize(Roles = "1" + "," + "2")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Usuario novoUsuario)
         {

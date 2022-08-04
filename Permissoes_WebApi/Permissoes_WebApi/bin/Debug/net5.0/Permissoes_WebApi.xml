@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Permissoes_WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Permissoes_WebApi.Interface.IStatusRepository.BuscarPorId(System.Int32)">
+            <summary>
+            método utilizado para buscr um usuário existente
+            </summary>
+            <param name="id">id do usuário que irá passar pela url da requisição</param>
+            <returns>usuário buscado</returns>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.IStatusRepository.Cadastro(Permissoes_WebApi.Domains.Status)">
+            <summary>
+            método utilizado para cadastrar um novo usuário
+            </summary>
+            <param name="NovoUsuario">objeto que irá armazenar as informações do novo usuário cadastrado</param>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.IStatusRepository.AtualizarStatus(System.Int32,Permissoes_WebApi.Domains.Status)">
+            <summary>
+            método utilizado para atualizar determinado usuário
+            </summary>
+            <param name="id">id do usuário buscado</param>
+            <param name="usuario">objeto que irá armazenar as novas informações do usuário</param>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.ITiposUsuarioRepository.Listar">
+            <summary>
+            Método utilizado para a listagem dos tipos de usuários
+            </summary>
+            <returns>Lista de todos os tipos de usuários</returns>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.ITiposUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Método utilizado para buscar por um tipo de usuário através de seu id
+            </summary>
+            <param name="id">objeto que armazena o id do tipo de usuário</param>
+            <returns>Retorna o tipo de usuário buscado</returns>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.ITiposUsuarioRepository.Cadastrar(Permissoes_WebApi.Domains.TiposUsuario)">
+            <summary>
+            Método utilizado para o cadastro de um novo tipo de usuário
+            </summary>
+            <param name="novoTiposUsuario">objeto que armazena as informações passando pelo corpo da requisição</param>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.ITiposUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuário
+            </summary>
+            <param name="id">objeto que armazena o id do usuário que será deletado passando pela URL da requisição</param>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.ITiposUsuarioRepository.Atualizar(System.Int32,Permissoes_WebApi.Domains.TiposUsuario)">
+            <summary>
+            Atualiza um tipo de usuário já existente
+            </summary>
+            <param name="id">armazena o id do tipo de usuário que será atualizado através da URL da requisição</param>
+            <param name="novoTiposUsuario">armazena novas informações para o tipo de usuário que está sendo atualizando passando as informações pelo corpo da requisição</param>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.IUsuarioRepository.Listar">
+            <summary>
+            método utilizado para a listagem de usuários
+            </summary>
+            <returns>lista de usuários</returns>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.IUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            método utilizado para buscr um usuário existente
+            </summary>
+            <param name="id">id do usuário que irá passar pela url da requisição</param>
+            <returns>usuário buscado</returns>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.IUsuarioRepository.Cadastro(Permissoes_WebApi.Domains.Usuario)">
+            <summary>
+            método utilizado para cadastrar um novo usuário
+            </summary>
+            <param name="NovoUsuario">objeto que irá armazenar as informações do novo usuário cadastrado</param>
+        </member>
+        <member name="M:Permissoes_WebApi.Interface.IUsuarioRepository.AtualizarUsuario(System.Int32,Permissoes_WebApi.Domains.Usuario)">
+            <summary>
+            método utilizado para atualizar determinado usuário
+            </summary>
+            <param name="id">id do usuário buscado</param>
+            <param name="usuario">objeto que irá armazenar as novas informações do usuário</param>
+        </member>
+    </members>
+</doc>

@@ -7,6 +7,7 @@ using System;
 
 namespace Permissoes_WebApi.Controller
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class TiposUsuarioController : ControllerBase
