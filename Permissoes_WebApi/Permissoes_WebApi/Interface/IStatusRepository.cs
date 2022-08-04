@@ -3,28 +3,22 @@ using System.Collections.Generic;
 
 namespace Permissoes_WebApi.Interface
 {
-    public interface IUsuarioRepository
+    public interface IStatusRepository
     {
-        Usuario Login(string email, string senha);
-
-        /// <summary>
-        /// método utilizado para a listagem de usuários
-        /// </summary>
-        /// <returns>lista de usuários</returns>
-        List<Usuario> Listar();
+        List<Status> Listar();
 
         /// <summary>
         /// método utilizado para buscr um usuário existente
         /// </summary>
         /// <param name="id">id do usuário que irá passar pela url da requisição</param>
         /// <returns>usuário buscado</returns>
-        Usuario BuscarPorId(int id);
+        Status BuscarPorId(int id);
 
         /// <summary>
         /// método utilizado para cadastrar um novo usuário
         /// </summary>
         /// <param name="NovoUsuario">objeto que irá armazenar as informações do novo usuário cadastrado</param>
-        void Cadastro(Usuario NovoUsuario);
+        void Cadastro(Status novoStatus);
 
         void Deletar(int id);
 
@@ -33,7 +27,6 @@ namespace Permissoes_WebApi.Interface
         /// </summary>
         /// <param name="id">id do usuário buscado</param>
         /// <param name="usuario">objeto que irá armazenar as novas informações do usuário</param>
-        void AtualizarUsuario(int id, Usuario novoUsuario);
-
+        void AtualizarStatus(int id, Status novoStatus);
     }
 }

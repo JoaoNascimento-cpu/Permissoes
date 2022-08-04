@@ -9,14 +9,17 @@ namespace Permissoes_WebApi.Repository
     public class UsuarioRepository : IUsuarioRepository
     {
         Permissoes ctx = new Permissoes();
-        public void AtualizarUsuario(int id, Usuario usuario)
+
+        public void AtualizarUsuario(int id, Usuario novoUsuario)
         {
             Usuario usuarioBuscado = ctx.Usuarios.Find(id);
 
-            if (usuario.Email != null)
+            if (novoUsuario.Email != null)
             {
-                usuarioBuscado.Email = usuario.Email;
-                usuarioBuscado.Senha = usuario.Senha;
+                usuarioBuscado.Email = novoUsuario.Email;
+                usuarioBuscado.Senha = novoUsuario.Senha;
+                usuarioBuscado.Nome = novoUsuario.Nome; 
+                usuarioBuscado.Idstatus = novoUsuario.Idstatus;
             }
 
             ctx.Usuarios.Update(usuarioBuscado);
